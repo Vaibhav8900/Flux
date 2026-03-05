@@ -1,67 +1,124 @@
-# FLUX — Lights Out Puzzle 🟡
+# ⚡ FLUX — Lights Out Puzzle
 
-A sleek, browser-based **Lights Out** puzzle game built with pure HTML, CSS, and JavaScript. No dependencies, no build steps — just open and play.
+> *Turn off the grid. Embrace the dark.*
+
+**FLUX** is a neon-soaked puzzle game based on the classic **Lights Out** mechanic.  
+Tap a cell — it and its neighbors flip. Your mission: turn every light **OFF**.  
+Simple rules. Endless challenge.
+
+**Play it in your browser — or download the Android app.**
+
+---
+
+## 🌐 Play Online
+
+[![Play Now](https://img.shields.io/badge/PLAY%20NOW-GitHub%20Pages-e8ff47?style=for-the-badge&labelColor=0a0a0f)](https://vybhvdev.github.io/flux/)
+
+No install. No account. Just open and play.
+
+---
+
+## 📱 Download Android APK
+
+[![Latest Release](https://img.shields.io/github/v/release/YOUR_USERNAME/YOUR_REPO?style=for-the-badge&color=e8ff47&labelColor=0a0a0f&label=DOWNLOAD%20APK)](https://github.com/vybhvdev/flux/releases/latest)
+
+> ⚠️ Enable *"Install from unknown sources"* in Android settings to sideload the APK.
+
+---
 
 ## 🎮 How to Play
 
-Click any cell on the 5×5 grid to toggle it **and its neighbors** (up, down, left, right) on or off.
+1. You start with a **5×5 grid** — some cells ON (glowing), some OFF (dark)
+2. Tap any cell to **toggle it and its 4 neighbors** (up, down, left, right)
+3. Goal: get **every single cell to OFF**
+4. Every puzzle is **guaranteed solvable** — no dead ends, no luck required
 
-**Goal:** Turn ALL lights OFF to solve the puzzle.
-
-It sounds simple — but it's trickier than it looks!
+---
 
 ## ✨ Features
 
-- 3 difficulty levels: **Easy**, **Medium**, **Hard**
-- Move counter & live timer
-- **Hint** button to highlight a suggested area
-- **Reset** to retry the same puzzle
-- Every puzzle is guaranteed solvable
-- Fully responsive — works on desktop and mobile
-- No install, no dependencies, no framework
+| Feature | Details |
+|---|---|
+| 🟡 **Neon visual design** | Dark background with glowing yellow cells and pink accents |
+| 🎯 **3 difficulty levels** | Easy (5 scramble moves) · Medium (10) · Hard (18) |
+| ⏱️ **Live timer** | Track how fast you can solve it |
+| 🔢 **Move counter** | Optimize your solution |
+| 💡 **Hint system** | Get a nudge when you're stuck |
+| 🔄 **Reset & New Puzzle** | Retry the same puzzle or generate a fresh one |
+| 📵 **Offline** | Works without internet on both web and Android |
 
-## 🚀 Getting Started
+---
 
-### Play Locally
+## 🧠 How Puzzles Are Generated
 
-Just open the file in any browser:
+FLUX uses a **reverse-scramble** algorithm to guarantee every puzzle is solvable:
 
-```bash
-open puzzle-game.html
+1. Start from a fully solved (all-OFF) grid
+2. Randomly apply `N` toggle moves based on difficulty
+3. The resulting state is your puzzle — always reversible, always fair
+
+---
+
+## 🎨 Visual Design
+
+```
+Background:  #0a0a0f  — deep void black
+Cell ON:     #e8ff47  — neon yellow glow
+Cell OFF:    #1a1a2e  — dark navy
+Accent:      #ff3c6e  — hot pink / red
+Fonts:       Bebas Neue (title) · Space Mono (UI)
 ```
 
-### Deploy to GitHub Pages
+---
 
-1. Create a new GitHub repository
-2. Add `puzzle-game.html` and rename it to `index.html`
-3. Push to your repo:
-   ```bash
-   git init
-   git add index.html README.md
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-   git push -u origin main
-   ```
-4. Go to **Settings → Pages → Source** and select `main` branch
-5. Your game will be live at `https://YOUR_USERNAME.github.io/YOUR_REPO/`
+## 🗂️ What's in This Repo
 
-## 🛠️ Customization
+```
+/
+├── index.html          # Web version — open in any browser
+├── README.md
+└── Releases            # Android APK — see GitHub Releases tab
+```
 
-Everything is in a single HTML file — easy to tweak:
+---
 
-| What | Where |
-|------|-------|
-| Grid size | Change `SIZE` variable in the `<script>` |
-| Difficulty (# of scramble moves) | Edit `difficultyMoves` object |
-| Colors & theme | CSS variables at the top (`:root`) |
-| Fonts | Google Fonts import in `<head>` |
+## 🛠️ Tech Stack
 
-## 📦 Tech Stack
+| Version | Stack |
+|---|---|
+| 🌐 Web | Vanilla HTML · CSS · JavaScript (zero dependencies) |
+| 📱 Android | Java · Native Android Views · No WebView |
 
-- **HTML / CSS / JavaScript** — vanilla, no frameworks
-- **Google Fonts** — Bebas Neue + Space Mono (SIL Open Font License)
+---
+
+## 🚀 Run the Web Version Locally
+
+```bash
+git clone https://github.com/vybhvdev/flux.git
+cd YOUR_REPO
+open index.html
+```
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Animations on cell toggle (pulse/ripple)
+- [ ] Best time leaderboard (local storage)
+- [ ] Sound effects & haptic feedback
+- [ ] 6×6 and 7×7 grid modes
+- [ ] Daily challenge puzzle
+- [ ] Play Store release
+
+---
 
 ## 📄 License
 
 Free to use, modify, and distribute. No attribution required.
+
+---
+
+<p align="center">
+  <b>Built entirely on Android. Puzzle-first. No ads. No fluff.</b><br/>
+  <sub>Made with ⚡ by Vaibhav</sub>
+</p>
